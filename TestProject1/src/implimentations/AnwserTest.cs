@@ -25,8 +25,8 @@ namespace TestProject1.src.implementations
             IAnswer answer = new AnswerStub("42", true);
             IAnswer answer2 = new AnswerStub("brussel sprouts", false);
 
-            Assert.AreEqual("42", answer.getAnwser());
-            Assert.AreEqual("brussel sprouts", answer2.getAnwser());
+            Assert.AreEqual("42", answer.getAnswer());
+            Assert.AreEqual("brussel sprouts", answer2.getAnswer());
         }
     }
 }

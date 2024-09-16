@@ -30,7 +30,7 @@ namespace FlashCards2.src.implementation
 
         public bool wasCorrect()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

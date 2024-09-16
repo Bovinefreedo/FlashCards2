@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace FlashCards2.src.frameworks
 {
-    internal interface IAnwser
+    public interface IAnwser
     {
+        public bool checkAnwser(bool anwser);
+        public string getAnwser();
     }
 }

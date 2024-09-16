@@ -9,7 +9,7 @@ namespace FlashCards2.src.frameworks
     public interface IQuestion
     {
         public List<string> displayQuestion();
-        public bool submitAnwser(List<bool> anwsers);
+        public bool submitAnswer(List<bool> answers);
         public bool wasCorrect();
     }
 }

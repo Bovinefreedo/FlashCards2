@@ -1,31 +1,32 @@
 using FlashCards2.src.frameworks;
-using FlashCards2.src.implimentation;
+using FlashCards2.src.implementation;
 
-namespace TestProject1.src.implimentations
+namespace TestProject1.src.implementations
 {
     [TestClass]
-    public class AnwserTest
+    public class AnswerTest
     {
-        [TestMethod]
-        public void testCheckAnwser()
-        {
-            IAnwser anwser = new AnwserStub("42", true);
-            IAnwser anwser2 = new AnwserStub("brussel sprouts", false);
 
-            Assert.IsTrue(anwser.checkAnwser(true));
-            Assert.IsFalse(anwser.checkAnwser(false));
-            Assert.IsTrue(anwser2.checkAnwser(false));
-            Assert.IsFalse(anwser2.checkAnwser(true));
+        [TestMethod]
+        public void testCheckAnswer()
+        {
+            IAnswer answer = new AnswerStub("42", true);
+            IAnswer answer2 = new AnswerStub("brussel sprouts", false);
+
+            Assert.IsTrue(answer.checkAnswer(true));
+            Assert.IsFalse(answer.checkAnswer(false));
+            Assert.IsTrue(answer2.checkAnswer(false));
+            Assert.IsFalse(answer2.checkAnswer(true));
         }
 
         [TestMethod]
-        public void testGetAnwser()
+        public void testGetAnswer()
         {
-            IAnwser anwser = new AnwserStub("42", true);
-            IAnwser anwser2 = new AnwserStub("brussel sprouts", false);
+            IAnswer answer = new AnswerStub("42", true);
+            IAnswer answer2 = new AnswerStub("brussel sprouts", false);
 
-            Assert.AreEqual("42", anwser.getAnwser());
-            Assert.AreEqual("brussel sprouts", anwser2.getAnwser());
+            Assert.AreEqual("42", answer.getAnwser());
+            Assert.AreEqual("brussel sprouts", answer2.getAnwser());
         }
     }
 }

@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FlashCards2.src.implimentation
+namespace FlashCards2.src.implementation
 {
     public class QuestionStub : IQuestion
     {
         private string _question;
-        private List<IAnwser> _anwsers;
-        public QuestionStub(string question, List<IAnwser> anwsers) {
+        private List<IAnswer> _answers;
+        public QuestionStub(string question, List<IAnswer> answers) {
             _question = question;
-            _anwsers = anwsers;
+            _answers = answers;
         }
         public List<string> displayQuestion()
         {
@@ -22,9 +22,9 @@ namespace FlashCards2.src.implimentation
             return display;
         }
 
-        public bool submitAnwser(List<bool> anwsers)
+        public bool submitAnswer(List<bool> answers)
         {
-            Console.WriteLine(anwsers[0]);
+            Console.WriteLine(answers[0]);
             return true;
         }
 

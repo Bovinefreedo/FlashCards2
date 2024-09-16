@@ -1,15 +1,15 @@
 using FlashCards2.src.frameworks;
 using FlashCards2.src.implimentation;
 
-namespace TestProject1
+namespace TestProject1.src.implimentations
 {
     [TestClass]
-    public class UnitTest1
+    public class AnwserTest
     {
         [TestMethod]
         public void testCheckAnwser()
         {
-            IAnwser anwser = new AnwserStub("42",true);
+            IAnwser anwser = new AnwserStub("42", true);
             IAnwser anwser2 = new AnwserStub("brussel sprouts", false);
 
             Assert.IsTrue(anwser.checkAnwser(true));
@@ -19,7 +19,8 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void testGetAnwser() {
+        public void testGetAnwser()
+        {
             IAnwser anwser = new AnwserStub("42", true);
             IAnwser anwser2 = new AnwserStub("brussel sprouts", false);
 

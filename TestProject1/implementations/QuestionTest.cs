@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestProject1.src.implementations
+namespace TestProject1.implementations
 {
     [TestClass]
     public class QuestionTest
     {
-        public List<QuestionStub> setup() {
+        public List<QuestionStub> setup()
+        {
             List<IAnswer> answer = new List<IAnswer> { new AnswerStub("42", true) };
             List<IAnswer> answer2 = new List<IAnswer> { new AnswerStub("brussel sprouts", false) };
 
@@ -25,7 +26,8 @@ namespace TestProject1.src.implementations
 
         }
         [TestMethod]
-        public void testDisplayQuestion() {
+        public void testDisplayQuestion()
+        {
             List<QuestionStub> questions = setup();
             List<string> question = new List<string> { "what is the answer of life, the universe and everything?", "what is for dinner?" };
 
@@ -34,7 +36,8 @@ namespace TestProject1.src.implementations
         }
 
         [TestMethod]
-        public void testSubmitAnswerQuestion() {
+        public void testSubmitAnswerQuestion()
+        {
             List<QuestionStub> questions = setup();
 
             Assert.IsTrue(questions[0].submitAnswer(new List<bool> { false }));
@@ -43,8 +46,9 @@ namespace TestProject1.src.implementations
 
         //Don't know how to test this
         [TestMethod]
-        public void testWasCorrect() { 
-        
+        public void testWasCorrect()
+        {
+
         }
     }
 }

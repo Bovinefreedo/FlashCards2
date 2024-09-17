@@ -1,7 +1,7 @@
 using FlashCards2.src.frameworks;
 using FlashCards2.src.implementation;
 
-namespace TestProject1.src.implementations
+namespace TestProject1.implementations
 {
     [TestClass]
     public class AnswerTest

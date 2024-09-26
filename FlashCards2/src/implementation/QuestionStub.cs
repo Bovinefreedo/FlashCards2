@@ -22,16 +22,16 @@ namespace FlashCards2.src.implementation
         }
         public IDisplayQ displayQuestion()
         {
-            return IDisplayQ disObj = new DisplayQImpl
+            return new DisplayQImpl
             {
                 question = _question,
                 anwser = _anwsers,
                 anwsered = _answered,
                 selfCheck = _selfCheck,
                 display = _strategy
+
             };
         }
-
         public void submitAnswer(List<bool> answers)
         {
             Console.WriteLine(answers[0]);

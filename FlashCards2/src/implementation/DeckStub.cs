@@ -11,27 +11,27 @@ namespace FlashCards2.src.implementation
     {
         List<IQuestion> _questions;
         int _currentQuestion  = 0;
+        IDisplayQ _shown; 
         public DeckStub(List<IQuestion> questions) { 
             _questions = questions;
+            _shown = _questions[0].displayQuestion();
         }
-        public List<string> nextQuestion()
+        public IDisplayQ nextQuestion()
         {
-            List<string> shown = new List<string>();
             if (_currentQuestion + 1 < _questions.Count) {
                 _currentQuestion++;
-                shown = _questions[_currentQuestion].displayQuestion();
+                 _shown = _questions[_currentQuestion].displayQuestion();
             }
-            return shown;
+            return _shown;
         }
 
-        public List<string> previousQuestion()
+        public IDisplayQ previousQuestion()
         {
-            List<string> shown = new List<string>();
             if (_currentQuestion - 1 >= 0) {
                 _currentQuestion--;
-                shown = _questions[_currentQuestion].displayQuestion();
+                _shown = _questions[_currentQuestion].displayQuestion();
             }
-            return shown;
+            return _shown;
         }
 
         public void submitAnswer(bool[] answer)

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace FlashCards2.src.frameworks
 {
-    internal interface IDisplayStrategy
+    public interface IDisplayStrategy
     {
+        public void displayQuestion(IDisplayQ question);
+        public void displayAnwser(IDisplayQ question);
     }
 }

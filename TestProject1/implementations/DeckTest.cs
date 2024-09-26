@@ -16,8 +16,8 @@ namespace TestProject1.implementations
             List<IAnswer> answer = new List<IAnswer> { new AnswerStub("42", true) };
             List<IAnswer> answer2 = new List<IAnswer> { new AnswerStub("brussel sprouts", false) };
 
-            QuestionStub question = new QuestionStub("what is the answer of life, the universe and everything?", answer);
-            QuestionStub question2 = new QuestionStub("what is for dinner?", answer);
+            //QuestionStub question = new QuestionStub("what is the answer of life, the universe and everything?", answer);
+            //QuestionStub question2 = new QuestionStub("what is for dinner?", answer);
 
             List<IQuestion> questions = new List<IQuestion>();
 

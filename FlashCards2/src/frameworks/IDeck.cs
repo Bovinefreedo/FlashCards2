@@ -8,8 +8,8 @@ namespace FlashCards2.src.frameworks
 {
     public interface IDeck
     {
-        public List<string> nextQuestion();
+        public IDisplayQ nextQuestion();
         public void submitAnswer(bool[] answer);
-        public List<string> previousQuestion();
+        public IDisplayQ previousQuestion();
     }
 }

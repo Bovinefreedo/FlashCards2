@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace FlashCards2.src.frameworks
 {
-    public interface IQuestion
+    public interface IDeck
     {
-        public IDisplayQ displayQuestion();
-        public void submitAnswer(List<bool> answers);
-        public bool wasCorrect();
+        public IDisplayQ nextQuestion();
+        public void submitAnswer(bool[] answer);
+        public IDisplayQ previousQuestion();
     }
 }

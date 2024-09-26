@@ -10,30 +10,26 @@ namespace FlashCards2.src.implementation
     public class QuestionStub : IQuestion
     {
         private string _question;
-        private List<IAnswer> _answers;
+        private List<IAnswer> _anwsers;
         private bool _answered = false;
-        public QuestionStub(string question, List<IAnswer> answers) {
+        private bool _selfCheck;
+        private IDisplayStrategy _strategy;
+        public QuestionStub(string question, List<IAnswer> answers, bool selfCheck, IDisplayStrategy strategy) {
             _question = question;
-            _answers = answers;
+            _anwsers = answers;
+            _selfCheck = selfCheck;
+            _strategy = strategy;
         }
-        public List<string> displayQuestion()
+        public IDisplayQ displayQuestion()
         {
-            if (_answered) return showUnanswered();
-            else return showUnanswered();
-        }
-
-        public List<string> showAnswered()
-        {
-            List<string> display = new List<string>();
-            display.Add(_answers[0].getAnswer());
-            return display;
-        }
-
-        public List<string> showUnanswered()
-        {
-            List<string> display = new List<string>();
-            display.Add(_question);
-            return display;
+            return IDisplayQ disObj = new DisplayQImpl
+            {
+                question = _question,
+                anwser = _anwsers,
+                anwsered = _answered,
+                selfCheck = _selfCheck,
+                display = _strategy
+            };
         }
 
         public void submitAnswer(List<bool> answers)

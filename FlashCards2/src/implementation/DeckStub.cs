@@ -34,9 +34,9 @@ namespace FlashCards2.src.implementation
             return shown;
         }
 
-        public void submitAnswer()
+        public void submitAnswer(bool[] answer)
         {
-            throw new NotImplementedException();
+            return;
         }
     }
 }

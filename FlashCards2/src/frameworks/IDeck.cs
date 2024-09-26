@@ -9,7 +9,7 @@ namespace FlashCards2.src.frameworks
     public interface IDeck
     {
         public List<string> nextQuestion();
-        public void submitAnswer();
+        public void submitAnswer(bool[] answer);
         public List<string> previousQuestion();
     }
 }

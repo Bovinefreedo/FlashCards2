@@ -11,22 +11,37 @@ namespace FlashCards2.src.implementation
     {
         private string _question;
         private List<IAnswer> _answers;
+        private bool _answered = false;
         public QuestionStub(string question, List<IAnswer> answers) {
             _question = question;
             _answers = answers;
         }
         public List<string> displayQuestion()
         {
+            if (_answered) return showUnanswered();
+            else return showUnanswered();
+        }
+
+        public List<string> showAnswered()
+        {
+            List<string> display = new List<string>();
+            display.Add(_answers[0].getAnswer());
+            return display;
+        }
+
+        public List<string> showUnanswered()
+        {
             List<string> display = new List<string>();
             display.Add(_question);
             return display;
         }
 
-        public bool submitAnswer(List<bool> answers)
+        public void submitAnswer(List<bool> answers)
         {
             Console.WriteLine(answers[0]);
-            return true;
+            return;
         }
+
 
         public bool wasCorrect()
         {

@@ -8,8 +8,10 @@ namespace FlashCards2.src.frameworks
 {
     public interface IQuestion
     {
+        public List<string> showAnswered();
+        public List<string> showUnanswered();
         public List<string> displayQuestion();
-        public bool submitAnswer(List<bool> answers);
+        public void submitAnswer(List<bool> answers);
         public bool wasCorrect();
     }
 }
